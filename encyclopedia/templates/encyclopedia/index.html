@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>All Pages</h1>
+
+    {% for page in pages %}
+        <a href="/wiki/{{ page|safe }}" class="btn btn-primary" style="width: 100%; margin: 5px;">{{page}}</a>
+        <br/>
+    {% endfor %}
+
+{% endblock %}
